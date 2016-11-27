@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Article</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <style>
+        .content {
+            width: 400px;
+        }
+
+        .article-stats {
+            margin-top: 8px;
+            font-size: 15px;
+            display: flex;
+        }
+
+        .article-likes {
+            cursor: pointer;
+            color: grey;
+            margin-left: 24px;
+        }
+
+        .article-comments {
+            cursor: pointer;
+            color: grey;
+        }
+    </style>
+
+    <script src="https://npmcdn.com/react@15.4.0/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.4.0/dist/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const articleData = {
+            title: 'Test article title',
+            author: 'Anonymous author',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ' +
+            'labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ' +
+            'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ' +
+            'esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt ' +
+            'in culpa qui officia deserunt mollit anim id est laborum',
+            likes: 100500,
+            comments: 100
+        };
+
+
+        const ArticleComponent = React.createClass({
+            render() {
+                const {
+                    title, author, text, likes, comments
+                } = this.props;
+
+                return (
+                    <div className="content">
+                        <h1>{title}</h1>
+                        <h4>{`by ${author}`}</h4>
+                        <p>{text}</p>
+                        <div className="article-stats">
+                            <div className="article-comments">
+                                <i className="fa fa-comment" />
+                                {likes || null}
+                            </div>
+                            <div className="article-likes">
+                                <i className="fa fa-heart" />
+                                {comments || null}
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+                <ArticleComponent
+                        title={articleData.title}
+                        author={articleData.author}
+                        text={articleData.text}
+                        likes={articleData.likes}
+                        comments={articleData.comments}
+                />,
+                document.getElementById('root')
+        );
+    </script>
+</body>
+</html>
