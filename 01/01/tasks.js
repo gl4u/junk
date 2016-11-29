@@ -12,14 +12,11 @@
         { id: 3, name: 'Irina', surname: 'Plushkina' }
     ];
 
-    function concatName(splitNames) {
-        return splitNames.map(function(item) {
-            return `${item.name} ${item.surname}`;
-        });
+    function concatUserNamesFromArray(users) {
+        return users.map(user => `${user.name} ${user.surname}`);
     }
 
-    console.log('task 1 output:');
-    console.log(concatName(users));
+    console.log('task 1 output:', concatUserNamesFromArray(users));
 
 }
 
@@ -36,14 +33,11 @@
         { id: 3, age: 18, name: 'Irina', surname: 'Plushkina' }
     ];
 
-    function filterUsersByAge(requestedAge, usersArr) {
-        return usersArr.filter(function(user) {
-            return requestedAge < user.age;
-        });
+    function filterUsersByAge(users, age) {
+        return users.filter(user => age < user.age);
     }
 
-    console.log('task 2 output:');
-    console.log(filterUsersByAge(21, users));
+    console.log('task 2 output:', filterUsersByAge(users, 21));
 
 }
 
@@ -76,16 +70,11 @@
         amount: 245
     }];
 
-    function calculateAvgTotal(ordersArr) {
-        const totalSum = ordersArr.reduce(function(sum, order) {
-            return sum + order.amount;
-        }, 0);
-
-        return totalSum / orders.length;
+    function calculateAverageOrderValue(orders) {
+        return orders.reduce((sum, order) => { return sum + order.amount }, 0) / orders.length;
     }
 
-    console.log('task 3 output:');
-    console.log(calculateAvgTotal(orders));
+    console.log('task 3 output:', calculateAverageOrderValue(orders));
 
 }
 
@@ -118,24 +107,17 @@
         interests: ['computers', 'food', 'math']
     }];
 
-    function findInterestsCount (usersWithInterests) {
-        let interestOccurrences = [];
-
-        usersWithInterests.forEach(user => {
-            interestOccurrences = interestOccurrences.concat(user.interests);
-        });
-
-        return interestOccurrences.reduce((agg, interestOccurrence) => {
-            if (!agg[interestOccurrence]) {
-                agg[interestOccurrence] = 0;
-            }
-            agg[interestOccurrence] += 1;
-            return agg;
+    function getUserInterestsDistribution(users) {
+        return users.reduce((interests, user) => {
+            return interests.concat(user.interests)
+        }, []).reduce((interestCounts, interest) => {
+            interestCounts[interest] = interestCounts[interest] + 1 || 1;
+            return interestCounts;
         }, {});
     }
 
-    console.log('task 4 output:');
-    console.log(findInterestsCount(users));
+    console.log('task 4 output:', getUserInterestsDistribution(users));
 
 
 }
+

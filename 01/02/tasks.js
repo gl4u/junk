@@ -8,36 +8,17 @@
 */
 
 {
-    let example = [1, [2, 3, [4, 5], [2, 4]], 3, [[2, [3, [1]], 4], [3]]];
+    const example = [1, [2, 3, [4, 5], [2, 4]], 3, [[2, [3, [1]], 4], [3]]];
 
-    function isArray(item) {
-        return Object.prototype.toString.call( item ) === '[object Array]';
-    }
-
-    function convertToFlatArray(array) {
-
-        function flattenIfHasSubArrays(array) {
-            let result = [];
-            for (let e of array) {
-                if (isArray(e)) {
-                    result = result.concat(flattenIfHasSubArrays(e));
-                } else {
-                    result.push(e);
-                }
-            }
-            return result;
-        }
-
-        if (isArray(array)) {
-            return flattenIfHasSubArrays(array);
-        } else {
-            return [].concat(array);
-        }
+    function convertToFlattenedArray(array) {
+        return array.reduce((flatArray, arrayElem) => {
+            return flatArray.concat(Array.isArray(arrayElem) ? convertToFlattenedArray(arrayElem) : arrayElem);
+        }, []);
     }
 
     console.log('task 1 output:');
     console.log('in:', example);
-    console.log('out:', convertToFlatArray(example));
+    console.log('out:', convertToFlattenedArray(example));
 
 }
 
@@ -55,40 +36,33 @@
 */
 
 {
-    let testObj1 = {
+    const testObj1 = {
         user_name: 'shar',
         is_logged_in: true
     };
 
-    let testObj2 = {
+    const testObj2 = {
         'user NAME': 'shar',
         TYPE: true
     };
 
-    function toCamelCase(str, separatorsRegEx) {
-        return str.replace(/([A-Za-z0-9]+)/g, function (occurrence, trash, offset) {
-            occurrence = occurrence.toLowerCase();
-            return offset > 0 ?
-                occurrence.charAt(0).toUpperCase() + occurrence.slice(1) :
-                occurrence;
-        }).replace(separatorsRegEx, '');
+    function toCamelCase(str) {
+        return str.toLowerCase().replace(/[\s|_|-](.)/g, matchedChar => matchedChar.toUpperCase())
+            .replace(/[\s|_|-]/g, '');
     }
 
-    function fixObjectKeys(obj, separators) {
-        var fixedObj = {};
-        for (let key of Object.keys(obj)) {
-            fixedObj[toCamelCase(key, separators)] = obj[key];
-        }
-        return fixedObj;
+    function convertKeysToCamelCase(obj) {
+        return Object.keys(obj).reduce((camelCaseKeysObj, key) => {
+            camelCaseKeysObj[toCamelCase(key)] = obj[key];
+            return camelCaseKeysObj;
+        }, {});
     }
-
-    const separatorsRegEx = /[\s|_]/g;
 
     console.log('task 2 output:');
     console.log('test obj1 in:', testObj1);
-    console.log('test obj1 out:', fixObjectKeys(testObj1, separatorsRegEx));
+    console.log('test obj1 out:', convertKeysToCamelCase(testObj1));
     console.log('test obj2 in:', testObj2);
-    console.log('test obj2 out:', fixObjectKeys(testObj2, separatorsRegEx));
+    console.log('test obj2 out:', convertKeysToCamelCase(testObj2));
 
 }
 
@@ -113,25 +87,22 @@
         return item === Object(item);
     }
 
-    function fixWholeObject(obj, separators) {
-        let fixedObj = fixObjectKeys(obj, separators);
+    function convertKeysToCamelCaseDeep(obj) {
+        const camelCaseKeysObj = convertKeysToCamelCase(obj);
 
-        for (let key of Object.keys(fixedObj)) {
-            const value = fixedObj[key];
-            if (isArray(value)) {
-                fixedObj[key] = value.map(elem => {
-                    return fixWholeObject(elem, separators);
-                });
-            } else if (isObject(value)) {
-                fixedObj[key] = fixWholeObject(value, separators);
-            }
-        }
+        return Object.keys(camelCaseKeysObj).reduce((camelCaseKeysObjNested, key) => {
+            const value = camelCaseKeysObjNested[key];
 
-        return fixedObj;
+            camelCaseKeysObjNested[key] = Array.isArray(value) ? value.map(elem => convertKeysToCamelCaseDeep(elem)) :
+                isObject(value) ? convertKeysToCamelCaseDeep(value) : value;
+            return camelCaseKeysObjNested;
+        }, camelCaseKeysObj);
+
     }
 
     console.log('task 3 output:');
     console.log('test obj in:', testObj);
-    console.log('test obj out:', fixWholeObject(testObj, /[\s|_|-]/g));
+    console.log('test obj out:', convertKeysToCamelCaseDeep(testObj));
 
 }
+
