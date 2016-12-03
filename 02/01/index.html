@@ -22,19 +22,19 @@
             title: 'Test article title',
             author: 'Anonymous author',
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ' +
-                'labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ' +
-                'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ' +
-                'esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt ' +
-                'in culpa qui officia deserunt mollit anim id est laborum'
+            'labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ' +
+            'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ' +
+            'esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt ' +
+            'in culpa qui officia deserunt mollit anim id est laborum'
         };
 
 
         const ArticleComponent = React.createClass({
             render() {
-                return React.createElement('div', {className: 'content'},
-                    React.createElement('h1', {}, `${this.props.title}`),
-                    React.createElement('h4', {}, `by ${this.props.author}`),
-                    React.createElement('p', {}, `by ${this.props.text}`)
+                return React.createElement('div', { className: 'content' },
+                    React.createElement('h1', {}, this.props.title),
+                    React.createElement('p', {}, 'by ', React.createElement('b', {}, this.props.author)),
+                    React.createElement('p', {}, this.props.text)
                 );
             }
         });
@@ -46,3 +46,4 @@
     </script>
 </body>
 </html>
+

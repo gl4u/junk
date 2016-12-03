@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Article</title>
 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
     <style>
         .content {
             width: 400px;
@@ -52,15 +50,22 @@
 
 
         const ArticleComponent = React.createClass({
+
             render() {
                 const {
-                    title, author, text, likes, comments
+                    title,
+                    author,
+                    text,
+                    likes,
+                    comments
                 } = this.props;
 
                 return (
                     <div className="content">
                         <h1>{title}</h1>
-                        <h4>{`by ${author}`}</h4>
+                        <p>
+                            by <b>{author}</b>
+                        </p>
                         <p>{text}</p>
                         <div className="article-stats">
                             <div className="article-comments">
@@ -78,15 +83,16 @@
         });
 
         ReactDOM.render(
-                <ArticleComponent
-                        title={articleData.title}
-                        author={articleData.author}
-                        text={articleData.text}
-                        likes={articleData.likes}
-                        comments={articleData.comments}
-                />,
-                document.getElementById('root')
+            <ArticleComponent
+                title={articleData.title}
+                author={articleData.author}
+                text={articleData.text}
+                likes={articleData.likes}
+                comments={articleData.comments}
+            />,
+            document.getElementById('root')
         );
     </script>
 </body>
 </html>
+

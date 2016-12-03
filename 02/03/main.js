@@ -114,47 +114,38 @@ const Feed = React.createClass({
     }
 });
 
-
-const FlippingCart = React.createClass({
+const FlippingCard = React.createClass({
 
     getInitialState() {
         return {
-            rotate: 180
+            isFlipped: false
         };
     },
 
-    handleClick() {
+    handleOnClick() {
         this.setState({
-            rotate: this.state.rotate === 0 ? 180 : 0
+            isFlipped: !this.state.isFlipped
         });
-
-        let flipperElement = document.querySelector(`#${this.props.id} > div.flipper`);
-        flipperElement.style.transform = `rotatey(${this.state.rotate}deg)`;
-        flipperElement.style.transitionDuration = "0.5s";
     },
 
     render() {
-
-        const {
-            id,
-            imgLink
-        } = this.props;
-
         return (
-            <div id={id} className="flip-container" onClick={this.handleClick}>
-                <div className="flipper">
+            <div className='flip-container' onClick={this.handleOnClick} >
+                <div className={this.state.isFlipped ? 'flipper flipped' : 'flipper'}>
                     <div className="front">
-                        <img src={imgLink}/>
+                        <img className="fp-image" src={this.props.imgUrl} />
                     </div>
                     <div className="back" />
                 </div>
             </div>
         );
     }
+
 });
 
 
 ReactDOM.render(
-    <FlippingCart id="flip1" imgLink="http://experience-share.com/wp-content/uploads/2015/10/Funny-pictures-meanwhile-in-russia-04-500x500.jpg"/>,
+    <FlippingCard imgUrl="https://s-media-cache-ak0.pinimg.com/736x/6d/fa/9c/6dfa9c16417f29c368aabf7deeb1fd22.jpg" />,
     document.getElementById('root')
 );
+

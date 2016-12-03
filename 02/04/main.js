@@ -44,6 +44,25 @@ const TWEETS = [
 ];
 
 const Tweet = React.createClass({
+
+    getFontSizeByPopularity() {
+        const popularity = this.props.retweets + this.props.likes;
+
+        if (popularity > 0 && popularity < 100) {
+            return 16;
+        }
+
+        if (popularity >= 100 && popularity < 1000) {
+            return 18;
+        }
+
+        if (popularity >= 1000) {
+            return 22;
+        }
+
+        return 14;
+    },
+
     render() {
         const {
             avatar,
@@ -56,18 +75,6 @@ const Tweet = React.createClass({
             isRetweeted
         } = this.props;
 
-        function fontSizeByPopularity(popularity) {
-            if (popularity < 100) {
-                return 16;
-            } else if (popularity < 1000) {
-                return 18;
-            } else if (popularity > 1000) {
-                return 22;
-            } else {
-                //default
-                return 14;
-            }
-        }
 
         return (
             <div className="tweet">
@@ -82,7 +89,7 @@ const Tweet = React.createClass({
                         @{author}
                     </a>
 
-                    <p className="tweet-text" style={{ fontSize: fontSizeByPopularity(retweets + likes) }}>
+                    <p className="tweet-text" style={{ fontSize: this.getFontSizeByPopularity() }}>
                         {text}
                     </p>
 
@@ -135,3 +142,4 @@ ReactDOM.render(
     <Feed />,
     document.getElementById('root')
 );
+
