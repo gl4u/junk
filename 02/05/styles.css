@@ -3,78 +3,94 @@ body {
     font-family: sans-serif;
 }
 
-.tweet {
+.heading {
+    font-family: 'Galada', Arial, sans-serif;
+    font-size: 46px;
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.group-body {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.student {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 16px;
     padding: 16px;
-    border: 1px solid #eaeaea;
-    border-radius: 6px;
+    border: 1px solid #b5b1b1;
     max-width: 700px;
 }
 
-.tweet-avatar {
+.student-avatar-container {
+    width: 150px;
+    height: 150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.student-avatar {
     max-width: 150px;
     border-radius: 4px;
 }
 
-.tweet-body {
+.student-info {
     margin-left: 16px;
 }
 
-.tweet-author {
+.student-name {
     display: block;
     font-weight: bold;
     text-decoration: none;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
-.tweet-text {
-    font-size: 22px;
-    font-weight: lighter;
+.student-social-links {
     margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.tweet-image {
-    max-height: 200px;
-}
-
-.tweet-stats {
-    margin-top: 8px;
-    font-size: 20px;
     display: flex;
-}
-
-.tweet-likes {
     cursor: pointer;
     color: grey;
-    margin-left: 24px;
+    font-size: 42px;
+    margin-right: 10px;
 }
 
-.tweet-likes:hover, .tweet-liked {
-    color: red;
+.student-geo {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.tweet-retweets {
-    cursor: pointer;
-    color: grey;
-}
-
-.tweet-retweets:hover, .tweet-retweeted {
+.geo-icon {
+    font-size: 32px;
     color: green;
 }
 
-.tweet-stat-icon {
-    margin-right: 8px;
+.social-link {
+    margin-right: 15px;
 }
 
-.student-social-link {
-    cursor: pointer;
-    color: grey;
-    font-size: 32px;
+.facebook-link:hover {
+    color: blue;
 }
 
-.student-social-link a {
+.github-link:hover {
+    color: #2f6627;
+}
+
+.mail-link:hover {
+    color:red;
+}
+
+.social-link .ref {
     color: inherit;
+}
+
+.icon {
+    margin-right: 8px;
 }

@@ -2,6 +2,7 @@ const STUDENTS = [
     {
         slack: "avramenko-vitaliy",
         name: "Авраменко Виталий ",
+        city: "Днепр",
         avatar: "https://github.com/Avramenko-Vitaliy.png",
         github: "https://github.com/Avramenko-Vitaliy",
         facebook: "https://www.facebook.com/profile.php?id=100001989148008",
@@ -10,6 +11,7 @@ const STUDENTS = [
     {
         slack: "a_viktor",
         name: "Ананьев Виктор ",
+        city: "Киев",
         avatar: "https://github.com/avikbox.png",
         github: "https://github.com/avikbox",
         facebook: "https://www.facebook.com/avikbox",
@@ -18,6 +20,7 @@ const STUDENTS = [
     {
         slack: "bah_kostya",
         name: "Багинский Константин ",
+        city: "Киев",
         avatar: "https://github.com/bahkostya.png",
         github: "https://github.com/bahkostya",
         facebook: "https://www.facebook.com/bah.kostya",
@@ -26,6 +29,7 @@ const STUDENTS = [
     {
         slack: "igor.valashov ",
         name: "Валашов Игорь ",
+        city: "Днепр",
         avatar: "https://github.com/gl4u.png",
         github: "https://github.com/gl4u",
         facebook: "https://www.facebook.com/profile.php?id=100014280665346",
@@ -34,6 +38,7 @@ const STUDENTS = [
     {
         slack: "juff",
         name: "Войцеховский Владимир",
+        city: "Киев",
         avatar: "https://github.com/juffik.png",
         github: "https://github.com/juffik",
         facebook: "https://www.facebook.com/Juffik",
@@ -42,6 +47,7 @@ const STUDENTS = [
     {
         slack: "vlad-vorontsov",
         name: "Воронцов Владислав",
+        city: "Киев",
         avatar: "https://github.com/vlad-vorontsov.png",
         github: "https://github.com/vlad-vorontsov",
         facebook: "https://www.facebook.com/vladyslav.vorontsov",
@@ -50,6 +56,7 @@ const STUDENTS = [
     {
         slack: "gregorynative",
         name: "Галушка Григорий ",
+        city: "Киев",
         avatar: "https://github.com/GregoryNative.png",
         github: "https://github.com/GregoryNative",
         facebook: "https://www.facebook.com/profile.php?id=100003913403695",
@@ -58,6 +65,7 @@ const STUDENTS = [
     {
         slack: "igorgripas",
         name: "Грипас Игорь ",
+        city: "Днепр",
         avatar: "https://github.com/igorgripas.png",
         github: "https://github.com/igorgripas",
         facebook: "https://www.facebook.com/profile.php?id=100001830881043",
@@ -66,6 +74,7 @@ const STUDENTS = [
     {
         slack: "-",
         name: "Грушко Александр",
+        city: "Киев",
         avatar: "https://github.com/AleksanderGruszko.png",
         github: "https://github.com/AleksanderGruszko",
         facebook: "https://www.facebook.com/multiclon",
@@ -74,6 +83,7 @@ const STUDENTS = [
     {
         slack: "yes",
         name: "Єфремова Світлана ",
+        city: "Киев",
         avatar: "https://github.com/svitlanaiefremova.png",
         github: "https://github.com/svitlanaiefremova",
         facebook: "https://www.facebook.com/yefremova.svetlana",
@@ -82,6 +92,7 @@ const STUDENTS = [
     {
         slack: "andreykalashnik",
         name: "Калашник Андрей",
+        city: "Киев",
         avatar: "https://github.com/AndreyKalashnik.png",
         github: "https://github.com/AndreyKalashnik",
         facebook: "https://www.facebook.com/andrey.kalashnik.167",
@@ -90,6 +101,7 @@ const STUDENTS = [
     {
         slack: "mrhidalgo",
         name: "Коваленко Андрей",
+        city: "Днепр",
         avatar: "https://github.com/MrHidalgo.png",
         github: "https://github.com/MrHidalgo",
         facebook: "https://www.facebook.com/profile.php?id=100001475119295",
@@ -98,6 +110,7 @@ const STUDENTS = [
     {
         slack: "-",
         name: "Коваль Юрий",
+        city: "Киев",
         avatar: "https://github.com/-.png",
         github: "https://github.com/-",
         facebook: "-",
@@ -106,6 +119,7 @@ const STUDENTS = [
     {
         slack: "dimondevs",
         name: "Ковальцов Дмитрий",
+        city: "Киев",
         avatar: "https://github.com/dimondevs.png",
         github: "https://github.com/dimondevs",
         facebook: "https://www.facebook.com/profile.php?id=100001778929516",
@@ -114,6 +128,7 @@ const STUDENTS = [
     {
         slack: "alukos",
         name: "Костюшин Александр",
+        city: "Киев",
         avatar: "https://github.com/alukos.png",
         github: "https://github.com/alukos",
         facebook: "https://www.facebook.com/mr.alukos",
@@ -122,6 +137,7 @@ const STUDENTS = [
     {
         slack: "kryvunroman",
         name: "Кривун Роман ",
+        city: "Киев",
         avatar: "https://github.com/KryvunRoman.png",
         github: "https://github.com/KryvunRoman",
         facebook: "https://www.facebook.com/roman.kryvun",
@@ -130,6 +146,7 @@ const STUDENTS = [
     {
         slack: "alexpoltava",
         name: "Омельченко Олександр",
+        city: "Киев",
         avatar: "https://github.com/alexpoltava.png",
         github: "https://github.com/alexpoltava",
         facebook: "https://www.facebook.com/profile.php?id=100014071297260",
@@ -138,6 +155,7 @@ const STUDENTS = [
     {
         slack: "fr3ud",
         name: "Павелко Александр",
+        city: "Киев",
         avatar: "https://github.com/Fr3ud.png",
         github: "https://github.com/Fr3ud",
         facebook: "https://www.facebook.com/alexander.pavelko.31",
@@ -146,6 +164,7 @@ const STUDENTS = [
     {
         slack: "alexpanich",
         name: "Паниченко Александр",
+        city: "Киев",
         avatar: "https://github.com/AlexPanich.png",
         github: "https://github.com/AlexPanich",
         facebook: "https://www.facebook.com/profile.php?id=100004737421372",
@@ -154,6 +173,7 @@ const STUDENTS = [
     {
         slack: "petruk-dmitriy",
         name: "Петрук Дмитрий ",
+        city: "Киев",
         avatar: "https://github.com/petruk-dmitriy.png",
         github: "https://github.com/petruk-dmitriy",
         facebook: "https://www.facebook.com/profile.php?id=100006725914841",
@@ -162,6 +182,7 @@ const STUDENTS = [
     {
         slack: "pyshchyk-o",
         name: "Пищик Оля",
+        city: "Киев",
         avatar: "https://github.com/pyshchyk-o.png",
         github: "https://github.com/pyshchyk-o",
         facebook: "https://www.facebook.com/olya.pischik",
@@ -170,6 +191,7 @@ const STUDENTS = [
     {
         slack: "web2ls",
         name: "Слободянский Алексей",
+        city: "Киев",
         avatar: "https://github.com/web2ls.png",
         github: "https://github.com/web2ls",
         facebook: "https://www.facebook.com/aslobodyansky",
@@ -178,6 +200,7 @@ const STUDENTS = [
     {
         slack: "raqushka",
         name: "Стригун Евгений",
+        city: "Днепр",
         avatar: "https://github.com/raqushka.png",
         github: "https://github.com/raqushka",
         facebook: "https://www.facebook.com/profile.php?id=100007263397513",
@@ -186,6 +209,7 @@ const STUDENTS = [
     {
         slack: "yurgenvoid",
         name: "Телятицкий Юрий",
+        city: "Киев",
         avatar: "https://github.com/yurgenvoid.png",
         github: "https://github.com/yurgenvoid",
         facebook: "https://www.facebook.com/yuri.telyatitsky",
@@ -194,6 +218,7 @@ const STUDENTS = [
     {
         slack: "timchukd",
         name: "Тимчук Дмитрий ",
+        city: "Киев",
         avatar: "https://github.com/timchukd.png",
         github: "https://github.com/timchukd",
         facebook: "https://www.facebook.com/dmitriytimchuk",
@@ -202,6 +227,7 @@ const STUDENTS = [
     {
         slack: "twin",
         name: "Якубович Дмитрий",
+        city: "Киев",
         avatar: "https://github.com/tsdv.png",
         github: "https://github.com/tsdv",
         facebook: "-",
@@ -210,6 +236,7 @@ const STUDENTS = [
     {
         slack: "fo0lman",
         name: "Ярчук Сергей ",
+        city: "Киев",
         avatar: "https://github.com/fo0lman.png",
         github: "https://github.com/fo0lman",
         facebook: "https://www.facebook.com/fo0lman",
@@ -218,6 +245,7 @@ const STUDENTS = [
     {
         slack: "vladiliucov",
         name: "Filiucov Vlad",
+        city: "Киев",
         avatar: "https://github.com/VladFiliucov.png",
         github: "https://github.com/VladFiliucov",
         facebook: "https://www.facebook.com/feeliucov.vlad",
@@ -226,6 +254,7 @@ const STUDENTS = [
     {
         slack: "wentris71",
         name: "Khomych Roma ",
+        city: "Киев",
         avatar: "https://github.com/Wentris71.png",
         github: "https://github.com/Wentris71",
         facebook: "https://www.facebook.com/profile.php?id=100004608847454",
@@ -234,6 +263,7 @@ const STUDENTS = [
     {
         slack: "mcslayer",
         name: "Птущук Николай",
+        city: "Киев",
         avatar: "https://github.com/mcslayer.png",
         github: "https://github.com/mcslayer",
         facebook: "https://www.facebook.com/mcslayer",
@@ -246,38 +276,48 @@ const STUDENTS = [
 
 
 const Student = React.createClass({
+
     render() {
         const {
             avatar,
             name,
+            city,
             github,
             facebook,
             email
         } = this.props;
 
         return (
-            <div className="tweet">
-                <img className="tweet-avatar" src={avatar} />
 
-                <div className="tweet-body">
-                    <p className="tweet-text" >
-                        {name}
+            <div className="student">
+                <div className="student-avatar-container">
+                    <img className="student-avatar" src={avatar} alt="Image unavailable" />
+                </div>
+
+                <div className="student-info">
+                    <p className="student-name" >
+                        <b>{name}</b>
                     </p>
 
-                    <div className="tweet-stats">
-                        <div className="student-social-link" >
-                            <a href={facebook} target="_blank" >
-                                <i className="tweet-stat-icon fa fa-facebook-square" />
+                    <div className="student-geo">
+                        <i className="geo-icon icon fa fa-map-marker" />
+                        {city}
+                    </div>
+
+                    <div className="student-social-links">
+                        <div className="social-link" >
+                            <a className="ref" href={facebook} target="_blank" >
+                                <i className="facebook-link icon fa fa-facebook-square" />
                             </a>
                         </div>
-                        <div className="student-social-link" >
-                            <a href={github} target="_blank" >
-                                <i className="tweet-stat-icon fa fa-github" />
+                        <div className="social-link" >
+                            <a className="ref" href={github} target="_blank" >
+                                <i className="github-link icon fa fa-github" />
                             </a>
                         </div>
-                        <div className="student-social-link">
-                            <a href={`mailto:${email}`} >
-                                <i className="test fa fa-envelope-square" />
+                        <div className="social-link">
+                            <a className="ref" href={`mailto:${email}`} >
+                                <i className="mail-link icon fa fa-envelope-square" />
                             </a>
                         </div>
                     </div>
@@ -290,7 +330,8 @@ const Student = React.createClass({
 const Group = React.createClass({
     render() {
         return (
-            <div>
+            <div className="group-body">
+                <div className="heading">Meet React Course Members</div>
                 {
                     STUDENTS.map(student =>
                         <Student
@@ -300,6 +341,7 @@ const Group = React.createClass({
                             github={student.github}
                             facebook={student.facebook}
                             email={student.email}
+                            city={student.city}
                         />
                     )
                 }
