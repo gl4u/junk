@@ -1,0 +1,110 @@
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.heading {
+    font-family: 'Galada', Arial, sans-serif;
+    font-size: 46px;
+    color: blue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.group-body {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.student {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px;
+    border: 1px solid #b5b1b1;
+    max-width: 700px;
+}
+
+.student-avatar-container {
+    width: 150px;
+    height: 150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.student-avatar {
+    max-width: 150px;
+    border-radius: 4px;
+}
+
+.student-info {
+    margin-left: 16px;
+}
+
+.student-name {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.student-social-links {
+    margin-top: 8px;
+    display: flex;
+    cursor: pointer;
+    color: grey;
+    font-size: 42px;
+    margin-right: 10px;
+}
+
+.student-geo {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.geo-icon {
+    font-size: 32px;
+    color: green;
+}
+
+.social-link {
+    margin-right: 15px;
+}
+
+.facebook-link:hover {
+    color: blue;
+}
+
+.github-link:hover {
+    color: #2f6627;
+}
+
+.mail-link:hover {
+    color:red;
+}
+
+.social-link .ref {
+    color: inherit;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.search-left-inner-addon {
+    position: relative;
+    margin-bottom: 30px;
+}
+.search-left-inner-addon .search-input {
+    width: 100%;
+    height: 32px;
+    padding-left: 30px;
+}
+.search-left-inner-addon .search-icon {
+    position: absolute;
+    padding: 8px 10px;
+}
